@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('/home/kat/project/datasets/data.csv')
+df = pd.read_csv('/home/den/project/datasets/data.csv')
 
 df["date"] = pd.to_datetime(df["date"], format='%d.%m.%Y')
 df = df.set_index('date')
@@ -17,5 +17,5 @@ def converttemp(x):
 
 df["temp"] = df["temp"].apply(converttemp)
 
-with open('/home/kat/project/datasets/data_processed.csv', 'w') as f:
+with open('/home/den/project/datasets/data_processed.csv', 'w') as f:
     df.to_csv(f, index=True)
