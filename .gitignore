@@ -1,0 +1,17 @@
+*.log
+*.cfg
+logs/
+*.py.swp
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# IPython
+profile_default/
+ipython_config.py
+
+__pycache__/
+/config.cache
