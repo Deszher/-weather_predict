@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import mlflow
 from mlflow.tracking import MlflowClient
  
-os.environ["MLFLOW_REGISTRY_URI"] = "/home/kat/project/mlflow/"
+os.environ["MLFLOW_REGISTRY_URI"] = "/home/den/project/mlflow/"
 mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("get_data_1")
 
@@ -24,7 +24,7 @@ class WeatherMaker:
         self.weather_report = []
         self.pages_weather_report = [["date", "temp"]]
         self.html = None
-        self.path = Path('/home/kat/project/datasets/data.csv') 
+        self.path = Path('/home/den/project/datasets/data.csv') 
         
     def get_html(self, url):
         self.html = requests.get(url)
